@@ -13,6 +13,7 @@ function initialize() {
         // Create `<img>` & set thumbnail src
         var thumbnail = document.createElement('img');
         thumbnail.setAttribute('src', entry.mediaGroups[0].contents[0].thumbnails[0].url);
+        thumbnail.setAttribute('class', 'thumbnail-main');
 
         // Create container feed entry
         var entryDiv = document.createElement("div");
