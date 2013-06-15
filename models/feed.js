@@ -9,7 +9,7 @@ var FeedItem = Backbone.Model.extend({
     this.title = params.title;
     this.tedLink = params.link;
     this.publishedDate = params.publishedDate;
-    this.category = params.category;
+    this.category = params.categories[0];
     this.description = params.content;
     this.teaser = params.contentSnippet;
   }
