@@ -10,7 +10,7 @@ var AppView = Backbone.View.extend({
     var feedList = this.model.get('feedList');
     return this.$el.html(
       feedList.map(function(item, index) {
-        if ((index+1) % 3 === 0) {
+        if (index !== 0 && (index+1) % 3 === 0) {
           var lastThird = new ItemView({model: item});
           lastThird.$el.addClass('last');
           return lastThird.render();
