@@ -11,7 +11,6 @@ var AppView = Backbone.View.extend({
     return this.$el.html(
       feedList.map(function(item, index) {
         if ((index+1) % 3 === 0) {
-          console.log("last");
           var lastThird = new ItemView({model: item});
           lastThird.$el.addClass('last');
           return lastThird.render();
