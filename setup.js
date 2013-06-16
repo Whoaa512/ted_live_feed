@@ -6,7 +6,7 @@ google.load("feeds", "1"); // Load the feed api
 function feedLoaded() {
   var tedFeed = TEDLiveFeed.feed = new google.feeds.Feed("http://feeds.feedburner.com/tedtalks_video");
   tedFeed.includeHistoricalEntries();
-  tedFeed.setNumEntries(300);
+  tedFeed.setNumEntries(25);
 
   var feedEntries = new FeedList();
 
