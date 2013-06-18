@@ -2,7 +2,10 @@ var ItemDetailView = Backbone.View.extend({
   template: _.template(
     "<div class='modal-header'>"+
       "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>"+
-      "<p><img class='thumbnail-main' src='<%= thumbnail %>'/>"+
+      "<p><video width='320' height='240' controls>"+
+        "<source src='<%= videoLink %>' type='video/mp4'>"+
+        "Your browser does not support the video tag."+
+      "</video>"+
       "<h3><a href='<%= tedLink %>'><%= title %></a></h3></p>"+
       "<p><%= category %> - <%= moment(publishedDate).calendar() %></p>"+
     "</div>"+
