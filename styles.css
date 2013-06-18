@@ -1,3 +1,8 @@
+body {
+  background-image: url('assets/dark_wall.png');
+  color: rgb(170, 170, 156);
+}
+
 .thumbnail-main {
   width: 250px;
   height: 188px;
