@@ -2,6 +2,10 @@ var AppView = Backbone.View.extend({
   el: $('div#feed'),
 
   initialize: function() {
+    this.model.get('feedList').on('change:itemClicked', function(itemModel) {
+      // set modal div to new detailView({model: itemModel});
+      // show the modal div
+    }, this);
     _.bindAll(this, 'render');
     this.render();
   },

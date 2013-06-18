@@ -12,6 +12,10 @@ var FeedItem = Backbone.Model.extend({
     this.set('category', params.categories[0]);
     this.set('description', params.content);
     this.set('teaser', params.contentSnippet);
+  },
+
+  details: function() {
+    this.trigger('itemClicked', this);
   }
 
 });
