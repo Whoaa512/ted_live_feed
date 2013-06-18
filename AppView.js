@@ -22,7 +22,7 @@ var AppView = Backbone.View.extend({
           return new RowView({
             id:"row"+index/3,
             models: [list[index],list[index+1],list[index+2]]
-          });
+          }).render();
         }
       })
     );
