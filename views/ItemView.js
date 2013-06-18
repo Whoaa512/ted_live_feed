@@ -1,5 +1,5 @@
 var ItemView = Backbone.View.extend({
-  className: 'one_third',
+  className: 'span4',
 
   template: _.template(
     "<img class='thumbnail-main' src='<%= thumbnail %>'/>"+
