@@ -11,7 +11,7 @@ var ItemDetailView = Backbone.View.extend({
       "<p><%= description %></p>"+
     "</div>"+
     "<div class='modal-footer'>"+
-      "<a href='#' class='btn btn-primary'>Close</a>"+
+      "<a href='#' data-dismiss='modal' class='btn btn-primary'>Close</a>"+
     "</div>"
   ),
 

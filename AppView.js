@@ -2,10 +2,14 @@ var AppView = Backbone.View.extend({
   el: $('div#feed'),
 
   initialize: function() {
-    this.model.get('feedList').on('change:itemClicked', function(itemModel) {
-      // set modal div to new detailView({model: itemModel});
+    this.model.get('feedList').on('all', function(e, itemModel) {
+      console.log("appView args:",arguments);
+      // set modal div to new detailView
+      $('div#detailsModal').html(new ItemDetailView({model: itemModel}).render());
       // show the modal div
-    }, this);
+      $('div#detailsModal').modal();
+    });
+
     _.bindAll(this, 'render');
     this.render();
   },
@@ -14,13 +18,7 @@ var AppView = Backbone.View.extend({
     var feedList = this.model.get('feedList');
     return this.$el.html(
       feedList.map(function(item, index) {
-        if (index !== 0 && (index+1) % 3 === 0) {
-          var lastThird = new ItemView({model: item});
-          lastThird.$el.addClass('last');
-          return lastThird.render();
-        } else {
-          return new ItemView({model: item}).render();
-        }
+        return new ItemView({model: item}).render();
       })
     );
   }
