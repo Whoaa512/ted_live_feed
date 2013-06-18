@@ -10,7 +10,8 @@ var ItemView = Backbone.View.extend({
 
   template: _.template(
     "<img class='thumbnail-main' src='<%= thumbnail %>'/>"+
-    "<p><%= title %> - <%= publishedDate %></p>"+
+    "<h4><%= title %></h4>"+
+    "<p><%= moment(publishedDate).calendar() %></p>"+
     "<p><a class='teaser' href='#' data-toggle='tooltip' data-placement='left' >"+
     "<%= teaser %></a></p>"
   ),

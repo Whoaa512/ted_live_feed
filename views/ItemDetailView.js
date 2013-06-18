@@ -4,7 +4,7 @@ var ItemDetailView = Backbone.View.extend({
       "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>"+
       "<p><img class='thumbnail-main' src='<%= thumbnail %>'/>"+
       "<h3><a href='<%= tedLink %>'><%= title %></a></h3></p>"+
-      "<p><%= publishedDate %> - <%= category %></p>"+
+      "<p><%= category %> - <%= moment(publishedDate).calendar() %></p>"+
     "</div>"+
     "<div class='modal-body'>"+
       "<p><%= description %></p>"+
