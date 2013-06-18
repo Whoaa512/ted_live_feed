@@ -16,8 +16,14 @@ var AppView = Backbone.View.extend({
   render: function() {
     var feedList = this.model.get('feedList');
     return this.$el.html(
-      feedList.map(function(item, index) {
-        return new ItemView({model: item}).render();
+      feedList.map(function(item, index, list) {
+        if(index % 3 === 0) {
+          // then create new Row with 3 models each
+          return new RowView({
+            id:"row"+index/3,
+            models: [list[index],list[index+1],list[index+2]]
+          });
+        }
       })
     );
   }
