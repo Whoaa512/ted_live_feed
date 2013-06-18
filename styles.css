@@ -1,6 +1,13 @@
 body {
   background-image: url('assets/dark_wall.png');
+}
+
+.container {
   color: rgb(170, 170, 156);
+}
+
+a.teaser {
+  color: #75ABC5;
 }
 
 .thumbnail-main {

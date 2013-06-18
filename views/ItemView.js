@@ -1,5 +1,5 @@
 var ItemView = Backbone.View.extend({
-  className: 'span4',
+  className: 'span4 text-center',
 
   events: {
     "click": function() {
@@ -11,10 +11,11 @@ var ItemView = Backbone.View.extend({
   template: _.template(
     "<img class='thumbnail-main' src='<%= thumbnail %>'/>"+
     "<p><%= title %> - <%= publishedDate %></p>"+
-    "<p><%= teaser %></p>"),
+    "<p><a class='teaser' href='#' data-toggle='tooltip' data-placement='left' >"+
+    "<%= teaser %></a></p>"
+  ),
 
   render: function() {
     return this.$el.append(this.template(this.model.attributes));
   }
-
 });
