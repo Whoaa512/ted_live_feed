@@ -8,6 +8,9 @@ var AppView = Backbone.View.extend({
       // show the modal div
       $('div#detailsModal').modal();
     });
+    $('div#detailsModal').on('hide', function(e) {
+      $('video#embeddedVideo').get(0).pause();
+    });
 
     _.bindAll(this, 'render');
     this.render();
