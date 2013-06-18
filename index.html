@@ -21,38 +21,13 @@
     <title>BitTorrent Code Challenge</title>
 
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- My CSS -->
     <link href="styles.css" rel="stylesheet">
 
     <!-- Mobile Viewport -->
-    <meta name="viewport" content="width=device-width">
-
-    <!-- Link to the CSS framework: http://workless.ikreativ.com/ -->
-    <!-- Note to BitTorrent: I would have used a minified version if it had existed. -->
-  <!-- ================ Start of Code needed for Workless CSS framework  =============== -->
-    <link href="libs/css/workless/assets/css/plugins.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/workless.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/scaffolding.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/typography.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/forms.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/tables.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/buttons.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/alerts.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/tabs.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/pagination.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/breadcrumbs.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/icons.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/helpers.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/print.css" rel="stylesheet">
-    <link href="libs/css/workless/assets/css/application.css" rel="stylesheet">
-
-  <!-- All JavaScript at the bottom, except modernizr -->
-  <script type="text/javascript" src="libs/css/workless/assets/js/modernizr.js"></script>
-
-  <!-- ================ End of Code needed for Workless CSS framework  =============== -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body class="blueish" id="top">
@@ -63,30 +38,31 @@
       <p>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     <![endif]-->
 
-    <section class='boxed'>
-      <section id='main'>
+    <div id='detailsModal' class='modal hide'></div>
+    <div class='container-fluid'>
+      <div class='row-fluid'>
         <!-- header -->
-        <header class='one_full bg_shadow'>
+        <header>
           <h1>TED Video Feed</h1>
         </header>
         <!-- /header -->
 
         <!-- main content -->
-        <div class='overlay'></div>
-        <div id="feed"></div>
+        <div class='row-fluid' id="feed"></div>
         <!-- /main content -->
 
         <!-- footer -->
         <footer>
         </footer>
         <!-- /footer -->
-      </section>
-    </section>
+      </div>
+    </div>
 
     <!-- JavaScript at the bottom for fast page loading -->
 
     <!--  3rd Party js-->
     <script src="https://www.google.com/jsapi"></script>
+    <script src='libs/bootstrap/js/bootstrap.js'></script>
     <script src='libs/js/jquery-1.10.1-min.js'></script>
     <script src='libs/js/underscore-min.js'></script>
     <script src='libs/js/backbone-min.js'></script>
